@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@{
+    var student = ViewData["student"] as List<StudentModel>;
+  
+    <table>
+    <thead>
+    <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Standard</th>
+    </tr>
+    </thead>
+    <tbody>
+
+            @foreach (var item in student)
+            {
+            <tr>
+                    <td>@item.rollNo </td>
+                    <td>@item.Name </td>
+                    <td>@item.Gender </td>
+                    <td>@item.standard </td>
+                
+            </tr>
+            }
+
+    </tbody>
+
+    </table>
+
+
+
+}
+
+
